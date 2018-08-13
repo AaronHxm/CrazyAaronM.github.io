@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://aaronhxm.club">
-  <title>springCloud学习第一章--springBoot | 诗和远方</title>
+  <title>springCloud学习第一章--了解微服务 | 诗和远方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="my blog">
+  <meta name="description" content="了解微服务  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技术。 微服务总结 每个微服务可独立运行在自己的进程中。 一系列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="springCloud学习第一章--springBoot">
+<meta property="og:title" content="springCloud学习第一章--了解微服务">
 <meta property="og:url" content="http://aaronhxm.club/2018/08/08/springCloud学习第一章-springBoot/index.html">
 <meta property="og:site_name" content="诗和远方">
-<meta property="og:description" content="my blog">
+<meta property="og:description" content="了解微服务  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技术。 微服务总结 每个微服务可独立运行在自己的进程中。 一系列">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-08T01:43:01.223Z">
+<meta property="og:updated_time" content="2018-08-13T07:13:21.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="springCloud学习第一章--springBoot">
-<meta name="twitter:description" content="my blog">
+<meta name="twitter:title" content="springCloud学习第一章--了解微服务">
+<meta name="twitter:description" content="了解微服务  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技术。 微服务总结 每个微服务可独立运行在自己的进程中。 一系列">
   
     <link rel="alternative" href="/atom.xml" title="诗和远方" type="application/atom+xml">
   
@@ -161,7 +161,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      springCloud学习第一章--springBoot
+      springCloud学习第一章--了解微服务
     </h1>
   
 
@@ -174,7 +174,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="了解微服务"><a href="#了解微服务" class="headerlink" title="了解微服务"></a>了解微服务</h2><p>  &ensp;&ensp;&ensp;&ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，<br>服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制<br>独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技<br>术。</p>
+<h1 id="微服务总结"><a href="#微服务总结" class="headerlink" title="微服务总结"></a>微服务总结</h1><ol>
+<li>每个微服务可独立运行在自己的进程中。</li>
+<li>一系列独立运行的微服务构建了整个系统。</li>
+<li>每个服务独立开发，只关注自己的业务。</li>
+<li>微服务通过轻量级的通信机制，<a href="http://www.runoob.com/w3cnote/restful-architecture.html" title="restful" target="_blank" rel="noopener">RESTfulApi</a>。</li>
+<li>可以使用不同的语言。</li>
+<li>全自动的部署机制。<h2 id="微服务的优缺点"><a href="#微服务的优缺点" class="headerlink" title="微服务的优缺点"></a>微服务的优缺点</h2></li>
+</ol>
+<h3 id="微服务优点"><a href="#微服务优点" class="headerlink" title="微服务优点"></a>微服务优点</h3><ol>
+<li>易于开发和维护，一个微服务只关注特定的功能。</li>
+<li>单个微服务启动时间快速。</li>
+<li>局部容易修改容易部署，某个模块出了问题只需要发布当前服务就行。单体应用是需要发布整个应用。</li>
+<li>技术不受限制，例如:某个模块需要使用MySql数据库，某些模块需要使用Oracle数据库</li>
+<li>可根据需求，实现细粒度的扩展。例如:某个服务遇到瓶颈可增加内存或者增加节点等</li>
+</ol>
+<h3 id="微服务缺点"><a href="#微服务缺点" class="headerlink" title="微服务缺点"></a>微服务缺点</h3><ol>
+<li>运维成本增加。单体应用只需要保证一个应用正常就行，微服务需要保障多个甚至几十上百个。</li>
+<li>分布式固定的复杂性，网络延迟、系统容错等情况。</li>
+<li>接口调整成本高，如果某个接口修改了入参或者返回的类型，那么所有调用该接口的都需要修改。(可使用Json)</li>
+</ol>
+<h1 id="微服务设计原则"><a href="#微服务设计原则" class="headerlink" title="微服务设计原则"></a>微服务设计原则</h1><ol>
+<li><a href="https://baike.baidu.com/item/%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99/9456515" title="单一职责原则" target="_blank" rel="noopener">单一职责原则</a><br>&ensp;&ensp;&ensp;&ensp;单一职责原则指的是一个单元(类、方法或者服务等)只应关注整个系统功能中单独、有界限的一部分。单一职责原则可以帮助我们更优雅的开发、更敏捷的交付。</li>
+<li>服务自治原则</li>
+</ol>
+
       
 
       
