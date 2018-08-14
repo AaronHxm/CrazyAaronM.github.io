@@ -155,19 +155,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-springBoot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-SpringCloud学习第二章-SpringBoot" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/08/springBoot/">springBoot</a>
+      <a class="article-title" href="/2018/08/08/SpringCloud学习第二章-SpringBoot/">springBoot</a>
     </h1>
   
 
         
-        <a href="/2018/08/08/springBoot/" class="archive-article-date">
+        <a href="/2018/08/08/SpringCloud学习第二章-SpringBoot/" class="archive-article-date">
   	<time datetime="2018-08-08T01:45:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
 </a>
         
@@ -175,7 +175,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="SpringCloud-学习前提"><a href="#SpringCloud-学习前提" class="headerlink" title="SpringCloud 学习前提"></a>SpringCloud 学习前提</h1><p>&ensp;&ensp;&ensp; SpringCloud是基于SpringBoot构建的，因此他延续了SpringBoot的契约模式以及开发方式。下面将讲到SpringBoot的构建方式。</p>
+<h1 id="SpringBoot创建"><a href="#SpringBoot创建" class="headerlink" title="SpringBoot创建"></a>SpringBoot创建</h1><p>1、新建一个Maven项目，如下图:<br><img src="https://i.imgur.com/tW4dTQZ.png" alt=""><br>注意红色部分需要勾选，然后点击next，进行下一步。</p>
+<p>2、创建一个项目，如下图:<br><img src="https://i.imgur.com/RPSBbHx.png" alt=""><br>点击next，完成了Maven项目的创建</p>
+<p>3、打开项目的pom.xml加入以下依赖:  </p>
+<pre><code>&lt;parent&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+    &lt;version&gt;1.5.8.RELEASE&lt;/version&gt;
+    &lt;relativePath /&gt; &lt;!-- lookup parent from repository --&gt;
+&lt;/parent&gt;
+  &lt;dependencies&gt;
+      &lt;!-- spring-boot的web启动的jar包 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+</code></pre><p>4、创建项目的启动程序Application.java </p>
+<pre><code>package org.aaron;  
+import org.springframework.boot.SpringApplication;  
+import org.springframework.boot.autoconfigure.SpringBootApplication;   
+@SpringBootApplication
+public class Application {
+
+   public static void main(String[] args) {
+
+      SpringApplication.run(Application.class, args);
+
+   }
+ }
+</code></pre><p>5、运行当前main方法即可启动Springboot项目</p>
+<h1 id="SpringBoot参数配置"><a href="#SpringBoot参数配置" class="headerlink" title="SpringBoot参数配置"></a>SpringBoot参数配置</h1>
       
 
       
@@ -187,7 +218,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/08/springBoot/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/08/08/SpringCloud学习第二章-SpringBoot/">展开全文 >></a>
         </p>
       
 
