@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://aaronhxm.club">
   <title>SpringCloud学习第一章--了解微服务 | 诗和远方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="了解微服务  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技术。">
+  <meta name="description" content="了解微服务  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技术。 微服务总结 每个微服务可独立运行在自己的进程中。 一系列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringCloud学习第一章--了解微服务">
 <meta property="og:url" content="http://aaronhxm.club/2018/08/08/SpringCloud学习第一章-了解微服务/index.html">
 <meta property="og:site_name" content="诗和远方">
-<meta property="og:description" content="了解微服务  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技术。">
+<meta property="og:description" content="了解微服务  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技术。 微服务总结 每个微服务可独立运行在自己的进程中。 一系列">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-14T03:27:23.122Z">
+<meta property="og:updated_time" content="2018-08-14T06:49:13.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringCloud学习第一章--了解微服务">
-<meta name="twitter:description" content="了解微服务  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技术。">
+<meta name="twitter:description" content="了解微服务  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技术。 微服务总结 每个微服务可独立运行在自己的进程中。 一系列">
   
     <link rel="alternative" href="/atom.xml" title="诗和远方" type="application/atom+xml">
   
@@ -175,42 +175,32 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="了解微服务"><a href="#了解微服务" class="headerlink" title="了解微服务"></a>了解微服务</h2><p>  &ensp;&ensp;&ensp;&ensp;微服务架构风格是一种将单一应用程序开发为一组小型服务的方法，每个服务运行在自己的进程中，<br>服务间通信采用轻量级通信机制(通常使用HTTP)。这些服务围绕业务能力构建并且可通过自动部署机制<br>独立部署。这些服务公用一个最小型的集中式的管理，服务可用不同的语言开发，使用不同的数据存储技<br>术。</p>
-<!--# 微服务总结 ##
-
-1. 每个微服务可独立运行在自己的进程中。
-2. 一系列独立运行的微服务构建了整个系统。
-3. 每个服务独立开发，只关注自己的业务。
-4. 微服务通过轻量级的通信机制，[RESTfulApi](http://www.runoob.com/w3cnote/restful-architecture.html "restful")。
-5. 可以使用不同的语言。
-6. 全自动的部署机制。
-
-## 微服务优点 ##
-
-
-1. 易于开发和维护，一个微服务只关注特定的功能。
-2. 单个微服务启动时间快速。
-3. 局部容易修改容易部署，某个模块出了问题只需要发布当前服务就行。单体应用是需要发布整个应用。
-4. 技术不受限制，例如:某个模块需要使用MySql数据库，某些模块需要使用Oracle数据库
-5. 可根据需求，实现细粒度的扩展。例如:某个服务遇到瓶颈可增加内存或者增加节点等
-
-
-## 微服务缺点 ##
-1. 运维成本增加。单体应用只需要保证一个应用正常就行，微服务需要保障多个甚至几十上百个。
-2. 分布式固定的复杂性，网络延迟、系统容错等情况。
-3. 接口调整成本高，如果某个接口修改了入参或者返回的类型，那么所有调用该接口的都需要修改。(可使用Json)
-
-# 微服务设计原则 #
-
-1. [单一职责原则](https://baike.baidu.com/item/%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99/9456515 "单一职责原则")  
-   &ensp;&ensp;&ensp;&ensp;单一职责原则指的是一个单元(类、方法或者服务等)只应关注整个系统功能中单独、有界限的一部分。单一职责原则可以帮助我们更优雅的开发、更敏捷的交付。
-2. 服务自治原则  
- &ensp;&ensp;&ensp;&ensp;服务自治原则是指每个微服务应具备独立的业务能力、依赖于运行环境。在微服务架构中，服务是独立的单元，应该与其他服务高度解耦。每个服务从开发、测试、构建、部署，都应当独立完成。
-3.    轻量级通信机制  
-    &ensp;&ensp;&ensp;&ensp;微服务之间应该通过轻量级的通信机制进行交互。常用协议有[REST](https://baike.baidu.com/item/rest/6330506 "REST")、[AMQP](https://baike.baidu.com/item/AMQP "AMQP")、STOMP(STOMP，Streaming Text Orientated Message Protocol，是流文本定向消息协议，是一种为MOM(Message Oriented Middleware，面向消息的中间件)设计的简单文本协议。其中最流行的STOMP消息代理是Apache ActiveMQ。)、[MQTT](https://baike.baidu.com/item/MQTT "MQTT")等.
-4.    微服务粒度  
-    &ensp;&ensp;&ensp;&ensp;微服务的粒度是难点，也常常是争论的焦点。应当合理的去划分微服务粒度，而不是一味的把服务做小。代码量的多少不能作为微服务的依据。因为微服务本身的业务复杂度不同，代码量也会不同。
-# 微服务架构 #
-    目前市面上有SpringCloud 和dubbo等，后面笔者会写着两种。-->
+<h1 id="微服务总结"><a href="#微服务总结" class="headerlink" title="微服务总结"></a>微服务总结</h1><ol>
+<li>每个微服务可独立运行在自己的进程中。</li>
+<li>一系列独立运行的微服务构建了整个系统。</li>
+<li>每个服务独立开发，只关注自己的业务。</li>
+<li>微服务通过轻量级的通信机制，<a href="http://www.runoob.com/w3cnote/restful-architecture.html" title="restful" target="_blank" rel="noopener">RESTfulApi</a>。</li>
+<li>可以使用不同的语言。</li>
+<li>全自动的部署机制。</li>
+</ol>
+<h2 id="微服务优点"><a href="#微服务优点" class="headerlink" title="微服务优点"></a>微服务优点</h2><ol>
+<li>易于开发和维护，一个微服务只关注特定的功能。</li>
+<li>单个微服务启动时间快速。</li>
+<li>局部容易修改容易部署，某个模块出了问题只需要发布当前服务就行。单体应用是需要发布整个应用。</li>
+<li>技术不受限制，例如:某个模块需要使用MySql数据库，某些模块需要使用Oracle数据库</li>
+<li>可根据需求，实现细粒度的扩展。例如:某个服务遇到瓶颈可增加内存或者增加节点等</li>
+</ol>
+<h2 id="微服务缺点"><a href="#微服务缺点" class="headerlink" title="微服务缺点"></a>微服务缺点</h2><ol>
+<li>运维成本增加。单体应用只需要保证一个应用正常就行，微服务需要保障多个甚至几十上百个。</li>
+<li>分布式固定的复杂性，网络延迟、系统容错等情况。</li>
+<li>接口调整成本高，如果某个接口修改了入参或者返回的类型，那么所有调用该接口的都需要修改。(可使用Json)</li>
+</ol>
+<h1 id="微服务设计原则"><a href="#微服务设计原则" class="headerlink" title="微服务设计原则"></a>微服务设计原则</h1><ol>
+<li><a href="https://baike.baidu.com/item/%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99/9456515" title="单一职责原则" target="_blank" rel="noopener">单一职责原则</a><br>&ensp;&ensp;&ensp;&ensp;单一职责原则指的是一个单元(类、方法或者服务等)只应关注整个系统功能中单独、有界限的一部分。单一职责原则可以帮助我们更优雅的开发、更敏捷的交付。</li>
+<li>服务自治原则<br>&ensp;&ensp;&ensp;&ensp;服务自治原则是指每个微服务应具备独立的业务能力、依赖于运行环境。在微服务架构中，服务是独立的单元，应该与其他服务高度解耦。每个服务从开发、测试、构建、部署，都应当独立完成。</li>
+<li>轻量级通信机制<br>&ensp;&ensp;&ensp;&ensp;微服务之间应该通过轻量级的通信机制进行交互。常用协议有<a href="https://baike.baidu.com/item/rest/6330506" title="REST" target="_blank" rel="noopener">REST</a>、<a href="https://baike.baidu.com/item/AMQP" title="AMQP" target="_blank" rel="noopener">AMQP</a>、STOMP(STOMP，Streaming Text Orientated Message Protocol，是流文本定向消息协议，是一种为MOM(Message Oriented Middleware，面向消息的中间件)设计的简单文本协议。其中最流行的STOMP消息代理是Apache ActiveMQ。)、<a href="https://baike.baidu.com/item/MQTT" title="MQTT" target="_blank" rel="noopener">MQTT</a>等.</li>
+<li>微服务粒度<br>&ensp;&ensp;&ensp;&ensp;微服务的粒度是难点，也常常是争论的焦点。应当合理的去划分微服务粒度，而不是一味的把服务做小。代码量的多少不能作为微服务的依据。因为微服务本身的业务复杂度不同，代码量也会不同。<h1 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h1>目前市面上有SpringCloud 和dubbo等，后面笔者会写着两种。</li>
+</ol>
 
       
 
