@@ -162,7 +162,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/08/SpringCloud学习第二章-SpringBoot/">springBoot</a>
+      <a class="article-title" href="/2018/08/08/SpringCloud学习第二章-SpringBoot/">SpringBoot</a>
     </h1>
   
 
@@ -176,15 +176,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="SpringCloud-学习前提"><a href="#SpringCloud-学习前提" class="headerlink" title="SpringCloud 学习前提"></a>SpringCloud 学习前提</h1><p>&ensp;&ensp;&ensp; SpringCloud是基于SpringBoot构建的，因此他延续了SpringBoot的契约模式以及开发方式。下面将讲到SpringBoot的构建方式。</p>
-<h1 id="SpringBoot创建"><a href="#SpringBoot创建" class="headerlink" title="SpringBoot创建"></a>SpringBoot创建</h1><p>1、新建一个Maven项目，如下图:<br><img src="https://i.imgur.com/tW4dTQZ.png" alt=""><br>注意红色部分需要勾选，然后点击next，进行下一步。</p>
-<p>2、创建一个项目，如下图:<br><img src="https://i.imgur.com/RPSBbHx.png" alt=""><br>点击next，完成了Maven项目的创建</p>
-<p>3、打开项目的pom.xml加入以下依赖:  </p>
-<pre><code>&lt;parent&gt;
-    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
-    &lt;version&gt;1.5.8.RELEASE&lt;/version&gt;
-    &lt;relativePath /&gt; &lt;!-- lookup parent from repository --&gt;
-&lt;/parent&gt;
+<h1 id="SpringBoot创建"><a href="#SpringBoot创建" class="headerlink" title="SpringBoot创建"></a>SpringBoot创建</h1><!--#1、新建一个Maven项目，如下图:
+![](https://i.imgur.com/tW4dTQZ.png)
+注意红色部分需要勾选，然后点击next，进行下一步。
+
+2、创建一个项目，如下图:
+![](https://i.imgur.com/RPSBbHx.png)
+点击next，完成了Maven项目的创建
+
+3、打开项目的pom.xml加入以下依赖:  
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.8.RELEASE</version>
+        <relativePath /> <!-- lookup parent from repository -->
+<pre><code>&lt;/parent&gt;
   &lt;dependencies&gt;
       &lt;!-- spring-boot的web启动的jar包 --&gt;
         &lt;dependency&gt;
@@ -205,7 +212,7 @@ public class Application {
 
    }
  }
-</code></pre><p>5、运行当前main方法即可启动Springboot项目</p>
+</code></pre><p>5、运行当前main方法即可启动Springboot项目 –&gt;</p>
 <h1 id="SpringBoot参数配置"><a href="#SpringBoot参数配置" class="headerlink" title="SpringBoot参数配置"></a>SpringBoot参数配置</h1>
       
 
