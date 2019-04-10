@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://aaronhxm.club">
-  <title>Archives | 诗和远方</title>
+  <title>[分布式利器之redis-第三章(字符串讲解)] | 诗和远方</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="my blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="诗和远方">
-<meta property="og:url" content="http://aaronhxm.club/archives/index.html">
+  <meta name="description" content="字符串常见命令&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;符串类型是Redis最基础的数据结构。首先键都是字符串类型。而且其他几种数据结构都是在字符串类型基础上构建的，所以字符串类型能为其他四种数据结构的学习奠定基础。字符串类型的值可以是字符串（简单的字符串、复杂的字符串（例如JSON、XML））、数字（整数、浮点数）、甚至是二进制（图片、音频、视频），但是值最大不能超过512MB。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[分布式利器之redis-第三章(字符串讲解)]">
+<meta property="og:url" content="http://aaronhxm.club/2019/03/31/分布式利器之redis-第三章(字符串讲解)/index.html">
 <meta property="og:site_name" content="诗和远方">
-<meta property="og:description" content="my blog">
+<meta property="og:description" content="字符串常见命令&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;符串类型是Redis最基础的数据结构。首先键都是字符串类型。而且其他几种数据结构都是在字符串类型基础上构建的，所以字符串类型能为其他四种数据结构的学习奠定基础。字符串类型的值可以是字符串（简单的字符串、复杂的字符串（例如JSON、XML））、数字（整数、浮点数）、甚至是二进制（图片、音频、视频），但是值最大不能超过512MB。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/VruNvc9.png">
+<meta property="og:updated_time" content="2019-04-09T14:01:02.885Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="诗和远方">
-<meta name="twitter:description" content="my blog">
+<meta name="twitter:title" content="[分布式利器之redis-第三章(字符串讲解)]">
+<meta name="twitter:description" content="字符串常见命令&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;符串类型是Redis最基础的数据结构。首先键都是字符串类型。而且其他几种数据结构都是在字符串类型基础上构建的，所以字符串类型能为其他四种数据结构的学习奠定基础。字符串类型的值可以是字符串（简单的字符串、复杂的字符串（例如JSON、XML））、数字（整数、浮点数）、甚至是二进制（图片、音频、视频），但是值最大不能超过512MB。">
+<meta name="twitter:image" content="https://i.imgur.com/VruNvc9.png">
   
     <link rel="alternative" href="/atom.xml" title="诗和远方" type="application/atom+xml">
   
@@ -157,211 +160,317 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-分布式利器之redis-第三章(字符串讲解)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      [分布式利器之redis-第三章(字符串讲解)]
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/31/分布式利器之redis-第三章(字符串讲解)/" class="archive-article-date">
+
+        
+        <a href="/2019/03/31/分布式利器之redis-第三章(字符串讲解)/" class="archive-article-date">
   	<time datetime="2019-03-31T14:18:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-31</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/31/分布式利器之redis-第三章(字符串讲解)/">[分布式利器之redis-第三章(字符串讲解)]</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/08/分布式利器之redis-第二章/" class="archive-article-date">
-  	<time datetime="2019-01-08T12:56:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/08/分布式利器之redis-第二章/">分布式利器之redis-第二章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <h2 id="字符串常见命令"><a href="#字符串常见命令" class="headerlink" title="字符串常见命令"></a>字符串常见命令</h2><p>&ensp;&ensp;&ensp;&ensp;符串类型是Redis最基础的数据结构。首先键都是字符串类型。<br>而且其他几种数据结构都是在字符串类型基础上构建的，所以字符串类型能为其他四种数据结构的学习奠定基础。<br>字符串类型的值可以是字符串（简单的字符串、复杂的字符串（例如JSON、XML））、数字（整数、浮点数）、甚至是二进制（图片、音频、视频），但是值最大不能超过512MB。   </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">作用</th>
+<th style="text-align:left">案例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">SET</td>
+<td style="text-align:left">将字符串值value关联到key</td>
+<td style="text-align:left">SET “HELLO” “WORLD”</td>
+</tr>
+<tr>
+<td style="text-align:left">APPEND</td>
+<td style="text-align:left">将值追加到指定key的值末尾，如果key不存在，则相当于增加操作</td>
+<td style="text-align:left">APPEND “HELLO” “!”</td>
+</tr>
+<tr>
+<td style="text-align:left">BITCOUNT</td>
+<td style="text-align:left">计算给定字符串中，被设置为1 的Bit位的数量</td>
+<td style="text-align:left">BITCOUNT “HELLO”</td>
+</tr>
+<tr>
+<td style="text-align:left">BITOP</td>
+<td style="text-align:left">对一个或多个保存二进制位的字符串key 进行位元操作</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">DECR</td>
+<td style="text-align:left">将 key 中储存的数字值减一。Key不存在，则将值置0，key类型不正确返 回一个错误。(key需要先存在)</td>
+<td style="text-align:left">DECR A</td>
+</tr>
+<tr>
+<td style="text-align:left">DECRBY</td>
+<td style="text-align:left">将key所储存的值减去指定数量。</td>
+<td style="text-align:left">DECRBY A   -1</td>
+</tr>
+<tr>
+<td style="text-align:left">INCR</td>
+<td style="text-align:left">将 key 中储存的数字值增一。不能转换为数字则报错</td>
+<td style="text-align:left">INCR B</td>
+</tr>
+<tr>
+<td style="text-align:left">INCRBY</td>
+<td style="text-align:left">将key所储存的值加上指定增量</td>
+<td style="text-align:left">INCRBY B 10</td>
+</tr>
+<tr>
+<td style="text-align:left">INCRBYFLOAT</td>
+<td style="text-align:left">为key中所储存的值加上指定的浮点数增量(key需要先存在)</td>
+<td style="text-align:left">INCRBYFLOAT C 0.5</td>
+</tr>
+<tr>
+<td style="text-align:left">GET</td>
+<td style="text-align:left">为key中所储存的值加上指定的浮点数增量(key需要先存在)</td>
+<td style="text-align:left">GET HELLO</td>
+</tr>
+<tr>
+<td style="text-align:left">GETBIT</td>
+<td style="text-align:left">对key所储存的字符串值，获取指定偏移量上的位</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">GETRANGE</td>
+<td style="text-align:left">返回key中字符串值的子字符串，字符串的截取范围由start和end两个偏移 量决定</td>
+<td style="text-align:left">GETRANGE KEY 1 5</td>
+</tr>
+<tr>
+<td style="text-align:left">GETSET</td>
+<td style="text-align:left">将给定key的值设为value，并返回key的旧值。非字符串报错。</td>
+<td style="text-align:left">GETSET KEY VALUE</td>
+</tr>
+<tr>
+<td style="text-align:left">MGET</td>
+<td style="text-align:left">返回所有(一个或多个)给定key的值</td>
+<td style="text-align:left">MGET KEY1 KEY2 KEY3</td>
+</tr>
+<tr>
+<td style="text-align:left">MSET</td>
+<td style="text-align:left">同时设置一个或多个key-value对</td>
+<td style="text-align:left">MSET K1 V1 K2 V2 K3 V3</td>
+</tr>
+<tr>
+<td style="text-align:left">MSETNX</td>
+<td style="text-align:left">同时设置一个或多个key-value对，若一个key已被占用，则全部的执行取 消。</td>
+<td style="text-align:left">MSETNX K1 V1 K2 V2 K3 V3</td>
+</tr>
+<tr>
+<td style="text-align:left">PSETEX</td>
+<td style="text-align:left">以毫秒为单位设置key 的有效时间</td>
+<td style="text-align:left">PSETEX K4 1000 V4</td>
+</tr>
+<tr>
+<td style="text-align:left">SETEX</td>
+<td style="text-align:left">将值value关联到key，并将key的有效时间(秒)</td>
+<td style="text-align:left">setex k5 1000 v5</td>
+</tr>
+<tr>
+<td style="text-align:left">SETNX</td>
+<td style="text-align:left">当key未被使用时，设置为指定值（KEY存在返回0，不存在返回1，可用于分布式锁）</td>
+<td style="text-align:left">setnx k5 v5</td>
+</tr>
+<tr>
+<td style="text-align:left">STRLEN</td>
+<td style="text-align:left">返回key所储存的字符串值的长度</td>
+<td style="text-align:left">STRLEN k5</td>
+</tr>
+<tr>
+<td style="text-align:left">SET KEY V XX</td>
+<td style="text-align:left">设置value到指定key，key必须存在</td>
+<td style="text-align:left">SET KEY V XX</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<p>字符串类型的命令比较多，我们将其分为常用的和不常用的两类。</p>
+<h2 id="字符串常见命令-1"><a href="#字符串常见命令-1" class="headerlink" title="字符串常见命令"></a>字符串常见命令</h2><p>1）设置值</p>
+<p>命令：set key value [ex seconds] [px milliseconds] [nx|xx]</p>
+<p>set命令的可选参数：</p>
+<p>ex seconds：为键设置秒级过期时间。</p>
+<p>px milliseconds：为键设置毫秒级过期时间。</p>
+<p>nx：键必须不存在，才可以设置成功，用于添加。</p>
+<p>xx：与nx相反，键必须存在，才可以设置成功，用于更新。</p>
+<p>127.0.0.1:6379&gt; set name kebi</p>
+<p>OK</p>
+<p>127.0.0.1:6379&gt; set name kebi ex 20 xx</p>
+<p>OK</p>
+<p>127.0.0.1:6379&gt; set age 26 nx</p>
+<p>OK</p>
+<p>除了set，Redis还提供了setex和setnx两个命令</p>
+<p>语法：</p>
+<p>setex key seconds value<br>setnx key values<br>setex和setnx可以看作set的专业定制版，适合某些场合。</p>
+<p>ex是用来设置时间的，所以后面必须接时间。</p>
+<p>nx是键必须不存在，所以不能用来更新。</p>
+<p>127.0.0.1:6379&gt; set age 26 nx</p>
+<p>OK</p>
+<p>127.0.0.1:6379&gt; setnx age 26</p>
+<p>(integer) 0  #设置失败，setnx必须设置不存在的</p>
+<p>127.0.0.1:6379&gt; set age 27</p>
+<p>OK   #可以更新</p>
+<p>127.0.0.1:6379&gt; setex name 30 kebi</p>
+<p>OK  #可以更新</p>
+<p>setnx和setex有什么用了？</p>
+<p>以setnx命令为例，由于Redis的单线程命令处理机制，如果有多个客户端同时执行setnx key value，</p>
+<p>根据setnx的特性只有一个客户能设置成功，setnx可以作为一种分布式锁的一种实现方案。</p>
+<p>2）获取值</p>
+<p>命令：get key</p>
+<p>127.0.0.1:6379&gt; get age<br>“27”<br>127.0.0.1:6379&gt; get age_kebi<br>(nil)<br>如果要获取的键不存在，则返回nil（空）。</p>
+<p>3）批量设置值</p>
+<p>命令：mset key value [key value…]</p>
+<p>下面操作通过mset命令一次性设置4个键值对：</p>
+<p>127.0.0.1:6379&gt; mset a 1 b 2 c 3 d 4<br>OK</p>
+<p>4）批量获取值</p>
+<p>命令：mget [key…]</p>
+<p>下面操作批量获取4个键的值：</p>
+<p>127.0.0.1:6379&gt; mget a b c d<br>1) “1”<br>2) “2”<br>3) “3”<br>4) “4”<br>如果有些键不存在，那么它的值为nil（空），结果是按照传入键的顺序返回：</p>
+<p>127.0.0.1:6379&gt; mget a b c f<br>1) “1”<br>2) “2”<br>3) “3”<br>4) (nil)</p>
+<p>批量操作命令可以有效提高开发效率，假如没有mget这样的命令，要执行n次get命令需要按照如下方式来执行：<br><img src="https://i.imgur.com/VruNvc9.png" alt=""><br>具体耗时：n次get时间 = n次网络时间 + n次命令时间</p>
+<p>使用mget命令后，要执行n次get命令操作只需要按照如下方式即可：</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/24/分布式利器之redis-第一章/" class="archive-article-date">
-  	<time datetime="2018-12-24T01:24:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/24/分布式利器之redis-第一章/">分布式利器之redis--第一章</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">分布式</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://aaronhxm.club/2019/03/31/分布式利器之redis-第三章(字符串讲解)/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/分布式//" class="article-tag-list-link color4">分布式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/08/SpringCloud学习第二章-SpringBoot/" class="archive-article-date">
-  	<time datetime="2018-08-08T01:45:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/08/分布式利器之redis-第二章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">分布式利器之redis-第二章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/08/SpringCloud学习第二章-SpringBoot/">SpringCloud学习第二章-SpringBoot</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/08/SpringCloud学习第一章-了解微服务/" class="archive-article-date">
-  	<time datetime="2018-08-08T01:43:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/08/SpringCloud学习第一章-了解微服务/">SpringCloud学习第一章--了解微服务</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Spring//" class="article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -384,8 +493,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
